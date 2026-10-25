@@ -1,0 +1,8 @@
+test_queue_eval 2026-10-23 20:53:06  lattice pg_June2025_corrected  run_dir /Users/fernandomontes/Research/COSY/Simulations/Agents/secar-reality/Results/test_queue_eval_run
+1 base (zeros) vs fp3_eval: PASS  max|diff| 0  count mismatches []  FP3 M12 -0.052538  eval_s 27.1
+1b base (zeros) vs cached unedited pkl [info only]: PASS  max|diff| 1.11e-16  count mismatches []  FP3 M12 -0.052538  eval_s 27.1
+2 Q9_B_SC +step vs fp3_eval: PASS  max|diff| 0  count mismatches []  FP3 M12 0.029572  eval_s 24.4
+3 WF2_Yaw +step vs fp3_eval: PASS  max|diff| 0  count mismatches []  FP3 M12 -0.051691  eval_s 24.5
+4 timeout: PASS  status cosy_timeout  COSY processes left []
+compile folders left in run_dir: []  -> PASS
+OVERALL: PASS

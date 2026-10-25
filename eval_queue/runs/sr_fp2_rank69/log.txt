@@ -1,0 +1,4 @@
+13:58:11 spec 2131bbf3b188 in /Users/fernandomontes/Research/COSY/Simulations/Agents/secar-reality/eval_queue/outbox/sr_fp2_rank69; waiting for the worker's spec_ack
+13:58:21 spec accepted: COSY 10.2 + ECAT (DigitalTwin eval_worker 838b11692327; cosy.bin fa67d2887a10), COSY10.2/pg_June2025_corrected.fox fca3af5780afba3e60dbbdea52f891cde18b45ca
+14:04:02 stencil only: base loss 204.3; J saved in /Users/fernandomontes/Research/COSY/Simulations/Agents/secar-reality/eval_queue/runs/sr_fp2_rank69/jacobian.npz
+14:04:02 STOP: stencil_only: ranking stencil done

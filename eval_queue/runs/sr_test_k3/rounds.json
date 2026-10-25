@@ -1,0 +1,43 @@
+{
+ "spec_id": "9f01c77f91ac",
+ "parameters": [
+  "Q9_B_SC",
+  "B5_Exit_dB",
+  "Q11_B_SC"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "base": {
+    "Q9_B_SC": 0.0,
+    "B5_Exit_dB": 0.0,
+    "Q11_B_SC": 0.0
+   },
+   "base_loss": 141.8735596185114,
+   "J_singular_values_per_trust": [
+    71.74335054336788,
+    34.6400403909639,
+    12.395239411480876
+   ],
+   "best": "r0c000",
+   "best_values": {
+    "Q9_B_SC": 0.001804756499941588,
+    "B5_Exit_dB": -0.0015568226646744763,
+    "Q11_B_SC": -0.020502913471181335
+   },
+   "best_loss": 0.7328464699982855,
+   "best_predicted_loss": 0.549372502441572,
+   "rho": 0.9987017511205918,
+   "n_failed": 0,
+   "family_size": 3,
+   "new_jacobian": true
+  }
+ ],
+ "family": {
+  "r0c000": 0.7328464699982855,
+  "r0c002": 2.1468591847395793,
+  "r0c003": 3.0456408217814452
+ },
+ "evaluations_sent": 12,
+ "stop": "rounds: max_rounds = 1 done"
+}

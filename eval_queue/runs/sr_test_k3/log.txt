@@ -1,0 +1,5 @@
+21:17:07 spec 9f01c77f91ac in /Users/fernandomontes/Research/COSY/Simulations/Agents/secar-reality/eval_queue/outbox/sr_test_k3; waiting for the worker's spec_ack
+21:17:07 spec accepted: COSY 10.2 + ECAT (DigitalTwin eval_worker d8f2cad769eb; cosy.bin fa67d2887a10), COSY10.2/pg_June2025_corrected.fox fca3af5780afba3e60dbbdea52f891cde18b45ca
+21:18:28 round 0: base loss 141.9 -> best r0c000 loss 0.7328 (predicted 0.5494, rho 0.999); family 3; sent 12
+21:18:28 round 0: rho inside [0.7, 1.3]: J reused at the new base
+21:18:28 STOP: rounds: max_rounds = 1 done

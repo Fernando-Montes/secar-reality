@@ -1,0 +1,35 @@
+SPEC 8.1 compare 2026-10-23 21:14:01
+sr_acc81_v1_20 r0s000 base: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s001 Q9_B_SC+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s002 Q9_B_SC-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s003 B5_Exit_dB+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s004 B5_Exit_dB-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s005 Q9_X+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s006 Q9_X-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s007 WF2_Yaw+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s008 WF2_Yaw-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s009 Q9_Roll+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_20 r0s010 Q9_Roll-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s000 base: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s001 Q9_B_SC+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s002 Q9_B_SC-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s003 B5_Exit_dB+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s004 B5_Exit_dB-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s005 Q9_X+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s006 Q9_X-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s007 WF2_Yaw+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s008 WF2_Yaw-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s009 Q9_Roll+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v1_143 r0s010 Q9_Roll-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s000 base: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s001 Q9_B_SC+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s002 Q9_B_SC-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s003 B5_Exit_dB+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s004 B5_Exit_dB-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s005 Q9_X+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s006 Q9_X-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s007 WF2_Yaw+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s008 WF2_Yaw-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s009 Q9_Roll+: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+sr_acc81_v7_10 r0s010 Q9_Roll-: PASS max|diff| 0 count mismatches []  [info] vs ranking file max|diff| 0
+OVERALL: PASS

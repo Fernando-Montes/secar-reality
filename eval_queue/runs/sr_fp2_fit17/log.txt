@@ -1,0 +1,4 @@
+14:35:14 spec b9b7b7618dd7 in /Users/fernandomontes/Research/COSY/Simulations/Agents/secar-reality/eval_queue/outbox/sr_fp2_fit17; waiting for the worker's spec_ack
+14:35:24 spec accepted: COSY 10.2 + ECAT (DigitalTwin eval_worker 838b11692327; cosy.bin fa67d2887a10), COSY10.2/pg_June2025_corrected.fox fca3af5780afba3e60dbbdea52f891cde18b45ca
+14:38:24 round 0: base loss 204.3 -> best r0c037 loss 1.794 (predicted 3.622, rho 1.01); family 16; sent 75
+14:38:24 STOP: physics stop: best candidate at a trust bound on ['WF1_Exit_dB']

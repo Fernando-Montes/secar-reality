@@ -1,0 +1,39 @@
+# secar-reality public repository (decisions by Fernando, 2026-10-24)
+
+# OS / Python / local tools
+.DS_Store
+__pycache__/
+*.pyc
+.claude/
+test.ipynb
+
+# Private notes: operational details removed from the public KB
+docs/kb_private/
+
+# Notes summarized from copyrighted books/manuals (Wollnik; COSY manuals)
+docs/kb/optics/
+docs/kb/cosy/language-reference.md
+
+# Licensed or copyrighted material: COSY executables and outputs, manuals, books, slides
+COSY10.2/*
+!COSY10.2/*.fox
+sources/
+Results/OpticsComparison.key
+
+# Simulation-side binaries and generated maps (ECAT ray_functions, COSY transfer maps)
+ray_functions*.so
+Matrix_Files/
+pkl_Files/*
+!pkl_Files/SECAR_Beamline.pkl
+
+# Archived PV tables (contain PV names) and the script that reads them
+Results/from_pvdesk/
+plot_e2_hall_vs_legdown.py
+
+# Superseded results, raw ray dumps, scratch run folders
+Results/archive/
+Results/rays_q7exit_*
+Results/efl_q7exit_to_dl19/
+Results/acc81_local_run/
+Results/e2_hall_run/
+Results/test_queue_eval_run/

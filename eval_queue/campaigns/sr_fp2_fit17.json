@@ -1,0 +1,406 @@
+{
+ "campaign": "sr_fp2_fit17",
+ "_comment": "First FP2 fit (2026-10-24): Jacobian loop at the E2 Hall base, 17 knobs (Fernando's choice (b)); trust ranges as approved for sr_fp2_rank69. Extended by Fernando 2026-10-24: ~2 h worst case (M 40, 25 rounds, family 50, 3000 evaluations).",
+ "lattice": {
+  "fox": "pg_June2025_corrected",
+  "fox_sha1": "fca3af5780afba3e60dbbdea52f891cde18b45ca",
+  "misalign": 1,
+  "wien_filters": "on"
+ },
+ "upstream": [
+  {
+   "name": "Q1_B_SC",
+   "tune_change": [
+    "Q1",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.00616
+  },
+  {
+   "name": "Q2_B_SC",
+   "tune_change": [
+    "Q2",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.00749
+  },
+  {
+   "name": "Q3_B_SC",
+   "tune_change": [
+    "Q3",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.006889999999999999
+  },
+  {
+   "name": "Q4_B_SC",
+   "tune_change": [
+    "Q4",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.026099999999999998
+  },
+  {
+   "name": "Q5_B_SC",
+   "tune_change": [
+    "Q5",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.008100000000000001
+  },
+  {
+   "name": "Q6_B_SC",
+   "tune_change": [
+    "Q6",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.01728
+  },
+  {
+   "name": "Q7_B_SC",
+   "tune_change": [
+    "Q7",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.06897411
+  },
+  {
+   "name": "H1_B_SC",
+   "tune_change": [
+    "H1",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.002652
+  },
+  {
+   "name": "H2_B_SC",
+   "tune_change": [
+    "H2",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.08227999999999999
+  },
+  {
+   "name": "O1_B_SC",
+   "tune_change": [
+    "O1",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "value": -0.06631999999999999
+  }
+ ],
+ "evaluation": {
+  "planes": [
+   "FP2"
+  ],
+  "nrays_per_group": 3000,
+  "cosy_timeout_s": 300,
+  "deck_cut": "none"
+ },
+ "parameters": [
+  {
+   "name": "B1_Exit_dB",
+   "tune_change": [
+    "B1 Exit",
+    "dB"
+   ],
+   "unit": "fraction",
+   "applied": "tracing",
+   "step": 0.0025,
+   "trust": [
+    -0.01,
+    0.01
+   ]
+  },
+  {
+   "name": "B2_Exit_dB",
+   "tune_change": [
+    "B2 Exit",
+    "dB"
+   ],
+   "unit": "fraction",
+   "applied": "tracing",
+   "step": 0.0025,
+   "trust": [
+    -0.01,
+    0.01
+   ]
+  },
+  {
+   "name": "B3_Exit_dB",
+   "tune_change": [
+    "B3 Exit",
+    "dB"
+   ],
+   "unit": "fraction",
+   "applied": "tracing",
+   "step": 0.0025,
+   "trust": [
+    -0.01,
+    0.01
+   ]
+  },
+  {
+   "name": "B4_Exit_dB",
+   "tune_change": [
+    "B4 Exit",
+    "dB"
+   ],
+   "unit": "fraction",
+   "applied": "tracing",
+   "step": 0.0025,
+   "trust": [
+    -0.01,
+    0.01
+   ]
+  },
+  {
+   "name": "WF1_Exit_dB",
+   "tune_change": [
+    "WF1 Exit",
+    "dB"
+   ],
+   "unit": "fraction",
+   "applied": "tracing",
+   "step": 0.0025,
+   "trust": [
+    -0.02,
+    0.02
+   ]
+  },
+  {
+   "name": "WF1_rhoE",
+   "tune_change": [
+    "WF1",
+    "rhoE"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.007,
+   "trust": [
+    -0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "WF1_rhoB",
+   "tune_change": [
+    "WF1",
+    "rhoB"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.007,
+   "trust": [
+    -0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "WF1_length",
+   "tune_change": [
+    "WF1",
+    "length"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.002222,
+   "trust": [
+    -0.07,
+    0.07
+   ]
+  },
+  {
+   "name": "H3_B_SC",
+   "tune_change": [
+    "H3",
+    "B_SC"
+   ],
+   "unit": "fraction",
+   "applied": "deck",
+   "step": 0.05,
+   "trust": [
+    -0.3,
+    0.3
+   ]
+  },
+  {
+   "name": "Q1_X",
+   "tune_change": [
+    "Q1",
+    "X"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.00025,
+   "trust": [
+    -0.003,
+    0.003
+   ]
+  },
+  {
+   "name": "Q1_Yaw",
+   "tune_change": [
+    "Q1",
+    "Yaw"
+   ],
+   "unit": "deg",
+   "applied": "deck",
+   "step": 0.05,
+   "trust": [
+    -0.2,
+    0.2
+   ]
+  },
+  {
+   "name": "Q2_X",
+   "tune_change": [
+    "Q2",
+    "X"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.00025,
+   "trust": [
+    -0.003,
+    0.003
+   ]
+  },
+  {
+   "name": "Q2_Yaw",
+   "tune_change": [
+    "Q2",
+    "Yaw"
+   ],
+   "unit": "deg",
+   "applied": "deck",
+   "step": 0.05,
+   "trust": [
+    -0.2,
+    0.2
+   ]
+  },
+  {
+   "name": "Q3_X",
+   "tune_change": [
+    "Q3",
+    "X"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.00025,
+   "trust": [
+    -0.003,
+    0.003
+   ]
+  },
+  {
+   "name": "Q4_X",
+   "tune_change": [
+    "Q4",
+    "X"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.00025,
+   "trust": [
+    -0.003,
+    0.003
+   ]
+  },
+  {
+   "name": "Q5_X",
+   "tune_change": [
+    "Q5",
+    "X"
+   ],
+   "unit": "m",
+   "applied": "deck",
+   "step": 0.00025,
+   "trust": [
+    -0.003,
+    0.003
+   ]
+  },
+  {
+   "name": "WF1_Yaw",
+   "tune_change": [
+    "WF1",
+    "Yaw"
+   ],
+   "unit": "deg",
+   "applied": "deck",
+   "step": 0.05,
+   "trust": [
+    -0.2,
+    0.2
+   ]
+  }
+ ],
+ "plan": {
+  "start": {},
+  "loss_planes": [
+   "FP2"
+  ],
+  "M": 40,
+  "seed": 20261024,
+  "rho_range": [
+   0.7,
+   1.3
+  ],
+  "n_family": 50,
+  "accept_loss": 4.7196,
+  "max_rounds": 25,
+  "min_progress": 0.1,
+  "max_evaluations": 3000,
+  "sample_cov": {
+   "FP2": [
+    [
+     0.0007289999999999999,
+     -0.0009,
+     0,
+     0
+    ],
+    [
+     -0.0009,
+     0.1296,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0.09,
+     -0.0084
+    ],
+    [
+     0,
+     0,
+     -0.0084,
+     2.25
+    ]
+   ]
+  },
+  "sample_cov_note": "same as the FP2 loss (Fernando, 2026-10-24): sigma 0.027, 0.36, 0.3, 1.5; covariances -0.00090, -0.0084"
+ }
+}

@@ -1,0 +1,148 @@
+case,description,plane,group,mean_x_mm
+ECAT,ECAT maps throughout,FP2,3,-0.9955118576552954
+ECAT,ECAT maps throughout,FP2,4,-1.7122858188118402
+ECAT,ECAT maps throughout,FP2,5,-1.5398283713398189
+ECAT,ECAT maps throughout,FP2,7,-1.5398283713398189
+ECAT,ECAT maps throughout,FP2,8,-1.104042661361773
+ECAT,ECAT maps throughout,FP2,9,-1.9134599882024808
+ECAT,ECAT maps throughout,FP2,10,-1.3084699037027525
+ECAT,ECAT maps throughout,FP2,13,0.2710562884231519
+ECAT,ECAT maps throughout,FP2,14,-5.267834554605343
+ECAT,ECAT maps throughout,FP2,15,-3.3394933202869956
+ECAT,ECAT maps throughout,FP2,16,2.624297778272786
+ECAT,ECAT maps throughout,FP3,3,-0.27005558972707633
+ECAT,ECAT maps throughout,FP3,4,1.337234948308253
+ECAT,ECAT maps throughout,FP3,5,0.6660746937443501
+ECAT,ECAT maps throughout,FP3,6,-0.32360615797448367
+ECAT,ECAT maps throughout,FP3,7,0.6660746937443507
+ECAT,ECAT maps throughout,FP3,8,-0.20108616245104974
+ECAT,ECAT maps throughout,FP3,9,1.2414936213067553
+ECAT,ECAT maps throughout,FP3,10,0.7752336476725985
+ECAT,ECAT maps throughout,FP3,14,1.6559957240407255
+ECAT,ECAT maps throughout,FP3,15,0.9287731157409973
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,3,-0.9405531311958895
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,4,-0.2143198027557793
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,5,-0.8259830858193383
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,7,-0.8259830858193383
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,8,-1.1149201868905052
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,9,-0.47557767827091463
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,10,-0.5430140330509933
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,13,1.4719282936088658
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,14,-5.553064250353363
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,15,-3.0490504315555604
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP2,16,3.698813960959874
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,3,-0.18075379128492902
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,4,3.840874476300285
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,5,1.9448010952265389
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,6,0.5532165095382946
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,7,1.9448010952265389
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,8,-0.16526081550945915
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,9,3.702081090263057
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,10,2.07724151240653
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,14,1.2188753652194775
+1,"COSY E and B (EFL_E 2368.2 mm, EFL_B 2431.7 mm); int E dz = v int B dz",FP3,15,1.3780711525619411
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,3,-1.249395236357584
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,4,-1.2952039064556624
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,5,-1.473986950037186
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,7,-1.4739869500371863
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,8,-1.385556390104737
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,9,-1.5137210382231054
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,10,-1.2309453970822402
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,13,0.5025500775778857
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,14,-5.534483900988982
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,15,-3.392602429828955
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP2,16,2.4543974939061455
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,3,-0.7132893462184126
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,4,2.022294884668988
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,5,0.7888413413566581
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,6,-0.4479711198842354
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,7,0.7888413413566572
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,8,-0.6827127473675568
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,9,1.9148121052912717
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,10,0.9007790244828717
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,14,1.2484853143766141
+2,"Danfysik E and B (EFL_E 2365.8 mm, EFL_B 2367.0 mm); int E dz = v int B dz",FP3,15,0.8358145269359845
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,3,-1.0306568628444264
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,4,-1.3991982556992453
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,5,-1.399590262326636
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,7,-1.399590262326636
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,8,-1.1534034001097269
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,9,-1.6019045515149217
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,10,-1.1708679861416504
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,13,0.43474157913591704
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,14,-5.175197788358846
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,15,-3.183289720370632
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,16,2.2474076933278493
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,3,-0.3364333050714494
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,4,1.849923586849573
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,5,0.8973953228657934
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,6,-0.24828474351662957
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,7,0.897395322865793
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,8,-0.2997396741172693
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,9,1.7502035334268309
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,10,1.0033534783217648
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,14,1.780434711608397
+3,"E Danfysik, B 2337 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,15,1.1667797055076288
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,3,-0.9912772523654718
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,4,-0.8404730950730457
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,5,-1.131105488833143
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,7,-1.131105488833143
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,8,-1.138637745036577
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,9,-1.0712681468212637
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,10,-0.8763494199471479
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,13,0.9295514074237152
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,14,-5.369728079539312
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,15,-3.12915984146321
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,16,2.947367476009423
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,3,-0.2685136595427616
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,4,2.7827028995005842
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,5,1.3865687237605353
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,6,0.10504158594264083
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,7,1.3865687237605342
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,8,-0.24181532729137042
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,9,2.66429335604597
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,10,1.505475375468846
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,14,1.4909513392002465
+4,"E Danfysik, B 2382 mm COSY tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,15,1.2517388021268616
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,3,-1.264500618524881
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,4,-1.6554267760214165
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,5,-1.6414112668178091
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,7,-1.6414112668178091
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,8,-1.3843814624388815
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,9,-1.8553408343676714
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,10,-1.4155898572483558
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,13,0.18533686234781152
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,14,-5.395510432796654
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,15,-3.418135860003269
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP2,16,2.0014338138803236
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,3,-0.7391841158419321
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,4,1.4252865805667008
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,5,0.4845523703689866
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,6,-0.6712897085005686
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,7,0.4845523703689859
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,8,-0.7016530020679201
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,9,1.330188705846103
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,10,0.5877344177859298
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,14,1.4545156075528431
+5,"E Danfysik, B 2337 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2337.0 mm); int E dz = v int B dz",FP3,15,0.7960810578987958
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,3,-1.2358651217107035
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,4,-1.1082277899976976
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,5,-1.383963426162801
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,7,-1.3839634261628013
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,8,-1.3802714618855485
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,9,-1.3361421676600915
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,10,-1.1322010745121884
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,13,0.6685834694757163
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,14,-5.599908697071522
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,15,-3.3745547153296696
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP2,16,2.6895301799537483
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,3,-0.69003288853592
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,4,2.3339611428031914
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,5,0.95257750454489
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,6,-0.3246012737425006
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,7,0.9525775045448897
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,8,-0.6626664196434043
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,9,2.220410649110609
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,10,1.068665113296968
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,14,1.151648592308412
+6,"E Danfysik, B 2382 mm Danfysik tails (EFL_E 2365.8 mm, EFL_B 2382.0 mm); int E dz = v int B dz",FP3,15,0.8640396879095067

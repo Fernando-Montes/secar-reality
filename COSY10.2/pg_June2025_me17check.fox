@@ -1,0 +1,1129 @@
+INCLUDE 'COSY';
+
+PROCEDURE RUN ;
+
+VARIABLE B1N 1 7;
+VARIABLE B1S1 1 7; VARIABLE B1S2 1 7;
+VARIABLE B2S1 1 7; VARIABLE B2S2 1 7;
+VARIABLE B3S1 1 7; VARIABLE B3S2 1 7;
+VARIABLE B4S1 1 7; VARIABLE B4S2 1 7;
+VARIABLE B5S1 1 7; VARIABLE B5S2 1 7;
+VARIABLE B6S1 1 7; VARIABLE B6S2 1 7;
+VARIABLE B7S1 1 7; VARIABLE B7S2 1 7;
+VARIABLE B8S1 1 7; VARIABLE B8S2 1 7;
+
+{Wien filter higher order components}
+VARIABLE NE1 1 4;
+VARIABLE NM1 1 4;
+
+VARIABLE NE2 1 4; {To accommodate E-field, WF2 feed through modif. by DF}
+
+VARIABLE WV 1;
+VARIABLE WW 1 2;
+VARIABLE CENTER 1;
+VARIABLE NMAX 1;
+VARIABLE WVX 1;
+VARIABLE WVY 1;
+
+VARIABLE XX 1;{X-SIZE}
+VARIABLE AX 1;
+VARIABLE YY 1;{Y-SIZE}
+VARIABLE AY 1;
+VARIABLE DE 1;
+
+{Index for naming matrix and ray element files}
+VARIABLE MATRIXINDEX 1;
+VARIABLE RAYINDEX 1;
+
+{Ray definitions}
+VARIABLE SRXX 1;
+VARIABLE SRAX 1;
+VARIABLE SRYY 1;
+VARIABLE SRAY 1;
+VARIABLE SRDE 1;
+
+VARIABLE MRESOL_P1 1;
+VARIABLE MRESOL_P2 1;
+
+VARIABLE NX 1;
+VARIABLE NA 1;
+VARIABLE NY 1;
+VARIABLE NB 1;
+VARIABLE NE 1;
+
+VARIABLE N1 1;
+VARIABLE N2 1;
+VARIABLE N3 1;
+VARIABLE N4 1;
+VARIABLE N5 1;
+VARIABLE READPARA 1;
+
+{To obtain the brho}
+VARIABLE CANONICAL_RIGIDITY 1;
+
+VARIABLE SC 1;
+VARIABLE MISALIGN 1;
+
+VARIABLE WF1R 1;
+VARIABLE WF2R 1;
+VARIABLE OCT1ON 1;
+VARIABLE WF1ON 1;
+VARIABLE WF2ON 1;
+
+VARIABLE Q1  1;
+VARIABLE Q1H 1;
+VARIABLE Q2  1;
+VARIABLE H1  1;
+VARIABLE Q3  1;
+VARIABLE Q4  1;
+VARIABLE Q5  1;
+VARIABLE H2  1;
+VARIABLE Q6  1;
+VARIABLE Q7  1;
+VARIABLE H3  1;
+VARIABLE O1  1;
+VARIABLE Q8  1;
+VARIABLE Q9  1;
+VARIABLE Q10 1;
+VARIABLE Q11 1;
+VARIABLE Q12 1;
+VARIABLE Q13 1;
+VARIABLE Q14 1;
+VARIABLE Q15 1;
+
+VARIABLE Q1_SC  1;
+VARIABLE Q2_SC  1;
+VARIABLE Q3_SC  1;
+VARIABLE Q4_SC  1;
+VARIABLE Q5_SC  1;
+VARIABLE Q6_SC  1;
+VARIABLE Q7_SC  1;
+VARIABLE Q8_SC  1;
+VARIABLE Q9_SC  1;
+VARIABLE Q10_SC 1;
+VARIABLE Q11_SC 1;
+VARIABLE Q12_SC 1;
+VARIABLE Q13_SC 1;
+VARIABLE Q14_SC 1;
+VARIABLE Q15_SC 1;
+VARIABLE H1_SC 1;
+VARIABLE H2_SC 1;
+VARIABLE H3_SC 1;
+VARIABLE O1_SC 1;
+
+PROCEDURE SETEFB;
+{DO NOT MODIFY UNLESS YOU HAVE RE-ANALYZED DANFYSIK DATA}
+{OR IF YOU WANT TO SEE THE IMPACT OF THE E- or B- FIELD INHOMOGENEITY IN THE WF's}
+
+{Optimized Ey- and By-fields, including higher orders}
+{in parentheses are the limits for MRES2 = 750}
+{y=0mm}
+NE1(1) := 0;
+NE1(2) := -0.01;
+NE1(3) := 0;
+NE1(4) := 11.;
+
+{y=0}
+NE2(1) := 0.0019;
+NE2(2) := -0.04;
+NE2(3) := 0;
+NE2(4) := 11 ;
+
+{y=0mm}
+NM1(1) := 0;
+NM1(2) := 0.033;
+NM1(3) := 0;
+NM1(4) := -3.8;
+
+B1S1(1):=0.189;
+B1S1(2):=0.0115;
+B1S1(3):=0.2438;
+B1S1(4):=0.9504;
+
+B1S2(1):=0.1504;
+B1S2(2):=-0.0278;
+B1S2(3):=0.1095;
+B1S2(4):=0.8070;
+
+B2S1(1):=0.115;
+B2S1(2):=0.0083;
+B2S1(3):=0.180;
+B2S1(4):=-40.15;
+
+B2S2(1):=0.115;
+B2S2(2):=-0.2499;
+B2S2(3):=1.430;
+B2S2(4):=38.34;
+
+B3S1(1):=0.190;
+B3S1(2):=1.0541;
+B3S1(3):=-9.475;
+B3S1(4):=5.54;
+
+B3S2(1):=0.115;
+B3S2(2):=-0.0499;
+B3S2(3):=34.09;
+B3S2(4):=52.87;
+
+B4S1(1):=0.191;
+B4S1(2):=-0.3390;
+B4S1(3):=-5.464;
+B4S1(4):=0.70;
+
+B4S2(1):=0.190;
+B4S2(2):=-0.0287;
+B4S2(3):=-0.332;
+B4S2(4):=0.08;
+
+B5S1(1):=0.189;
+B5S1(2):=0.712;
+B5S1(3):=-0.825;
+B5S1(4):=-53.36;
+
+B5S2(1):=-0.180;
+B5S2(2):=-5.549;
+B5S2(3):=3.288;
+B5S2(4):=28.82;
+
+B6S1(1):=0.198;
+B6S1(2):=0.023;
+B6S1(3):=-0.227;
+B6S1(4):=1.02;
+
+B6S2(1):=0.203;
+B6S2(2):=-4.13;
+B6S2(3):=67.40;
+B6S2(4):=52.95;
+
+B7S1(1):=0;
+B7S1(2):=0.0115;
+B7S1(3):=0.066;
+B7S1(4):=3.44;
+
+B7S2(1):=0;
+B7S2(2):=0.0228;
+B7S2(3):=0.036;
+B7S2(4):=-1.02;
+
+B8S1(1):=0;
+B8S1(2):=0.0115;
+B8S1(3):=0.066;
+B8S1(4):=3.44;
+
+B8S2(1):=0;
+B8S2(2):=0.0228;
+B8S2(3):=0.036;
+B8S2(4):=-1.02;
+
+ENDPROCEDURE;
+
+{**************** WRITE MATRIX TO FILE WIHT AUTOMATIC INDEXING **************}
+
+{NOTE: Experiment more with PM vs WM!}
+
+PROCEDURE WMI;
+WM MATRIXINDEX;                   {Create a fort.'MATRIXINDEX' file which contains the corresponding transformation matrix}
+{RAYINDEX :=  MATRIXINDEX + 100;
+WRAY RAYINDEX;                    {Create a fort.'RAYINDEX' file which contains the 8 coordinates for each ray at that point}  }
+MATRIXINDEX := MATRIXINDEX + 1;
+UM;                             {Clear it for the next element}
+ENDPROCEDURE;
+
+{**************** READ_RAY **************}
+PROCEDURE READ_RAY;
+
+VARIABLE SAVEMAP 10000 8;
+SM SAVEMAP;
+UM; CR;
+
+{N1=1 {# of rays: 3} -> -1 0 +1}
+{N1=2 {# of rays: 5} -> -2 -1 0 +1 +2}
+{N1=3 {# of rays: 7} -> -3 -2 -1 0 +1 +2 +3}
+{N1=4 {# of rays: 9} -> -4 -3 -2 -1 0 +1 +2 +3 +4}
+
+N1:=1; N2:=3; N3:=1; N4:=1; N5:=2;
+
+LOOP NX 1 2*N1+1;LOOP NA 1 2*N2+1;LOOP NY 1 2*N3+1;LOOP NB 1 2*N4+1;
+LOOP NE 1 2*N5+1;
+
+SRXX:= XX*(NX-(N1+1))/N1;
+SRAX:= AX*(NA-(N2+1))/N2;
+SRYY:= YY*(NY-(N3+1))/N3;
+SRAY:= AY*(NB-(N4+1))/N4;
+SRDE:= DE*(NE-(N5+1))/N5;
+
+IF (((NA-(N2+1))/N2)^2+((NB-(N4+1))/N4)^2+((NE-(N5+1))/N5)^2)<1.01;
+SR SRXX SRAX SRYY SRAY 0 SRDE 0 0 1;
+ENDIF;
+ENDLOOP;ENDLOOP;ENDLOOP;ENDLOOP;ENDLOOP;
+
+AM SAVEMAP;
+ENDPROCEDURE;
+
+PROCEDURE PRINT_XDIM;
+
+WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));
+WRITE 6 'Xdim' WW(1)-WW(2);
+
+ENDPROCEDURE;
+
+PROCEDURE PRINT_YDIM;
+
+WW(1):= VMAX(RAY(3));
+WW(2):= VMIN(RAY(3));
+WRITE 6 'Ydim' WW(1)-WW(2);
+
+ENDPROCEDURE;
+
+
+{**************** RECOIL_LINE ****************}
+
+PROCEDURE RECOIL_BL;
+
+{***** Section 1 *****}
+
+FR 3; {Fringe field flag}
+
+{Write initial rays}
+{WRAY 350;}
+
+DL 0.800527; {TA-upQ1}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0050 -0.0712 ; {Yaw Pitch}
+ RA -0.0034; {Roll}
+ SA 0.000051 0.000145; {x, y}
+ENDIF;
+
+M5 0.2498 Q1*SC Q1H*SC 0 -0.0032*(Q1/-0.40033)*SC 0 0.055;  {Q1+Hex}
+
+IF (MISALIGN=1);
+ SA -0.000051 -0.000145; {x, y}
+ RA 0.0034; {Roll}
+ TA 0.0050 0.0712 ; {Yaw Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.1060544; {To D1477 Drive}
+{WMI;}
+
+DL 0.0844356; {Remainder of DL2}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0571 0.0336; {Yaw, Pitch}
+ RA 0.0073; {Roll}
+ SA -0.000295 0.000223; {x, y}
+ENDIF;
+
+MQ 0.2979 Q2*SC 0.068;                                     {Q2}
+
+IF (MISALIGN=1);
+ SA 0.000295 -0.000223; {x, y}
+ RA -0.0073; {Roll}
+ TA 0.0571 -0.0336; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+{FC 1485 is 1.93 m from center of target}
+{DL3 is 0.581038 m}
+{Up to DL3 is 1.538717 m}
+{0.391283 m into DL3 is where FC 1485 is located}
+
+{DL 0.391283;} {To FC 1485}
+DL 0.3926972;
+{WMI;}
+
+{DL 0.189755;} {Reminader of D3}
+DL 0.1883408;
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0249 -0.0079 ; {Yaw, Pitch}
+ RA -0.0135; {Roll}
+ SA 0.000404 0.000261; {x, y}
+ENDIF;
+
+MC 1.25 22.51145 0.030 B1N B1S1 B1S2 7;                    {B1}
+
+IF (MISALIGN=1);
+ SA -0.000404 -0.000261; {x, y}
+ RA 0.0135; {Roll}
+ TA 0.0249 0.0079 ; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.999778; {DL4}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0011 -0.0138; {Yaw, Pitch}
+ RA -0.0087; {Roll}
+ SA 0.000434 0.000279; {x, y}
+ENDIF;
+
+MC 1.25 22.5121 0.030 B1N B2S1 B2S2 7;                     {B2}
+
+IF (MISALIGN=1);
+ SA -0.000434 -0.000279; {x, y}
+ RA 0.0087; {Roll}
+ TA 0.0011 0.0138; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.87087; {doB2 - VD1515}
+{WMI;}
+
+DL 0.297381; {VD1515 - upH1}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0082 -0.0106; {Yaw, Pitch}
+ RA -0.0100; {Roll}
+ SA 0.000491 0.000376; {x, y}
+ENDIF;
+
+MH 0.263 H1*SC 0.11;                                        {HEX1}
+
+IF (MISALIGN=1);
+ SA -0.000491 -0.000376; {x, y}
+ RA 0.0100; {Roll}
+ TA 0.0082 0.0106; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.268763; {DL7}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0076 -0.0089; {Yaw, Pitch}
+ RA 0.0084; {Roll}
+ SA 0.000489 0.000372; {x, y}
+ENDIF;
+
+MQ 0.3499 Q3*SC 0.11;                                      {Q3}
+
+IF (MISALIGN=1);
+ SA -0.000489 -0.000372; {x, y}
+ RA -0.0084; {Roll}
+ TA 0.0076 0.0089; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.35139; {DL8}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0137 0.0338; {Yaw, Pitch}
+ RA 0.0023; {Roll}
+ SA 0.000125 0.000297; {x, y}
+ENDIF;
+
+M5 0.3467 Q4*SC 0 0 0 0 0.08;                              {Q4}
+
+IF (MISALIGN=1);
+ SA -0.000125 -0.000297; {x, y}
+ RA -0.0023; {Roll}
+ TA 0.0137 -0.0338; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.213664; {DL9}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0221 -0.0275; {Yaw, Pitch}
+ RA 0.0302; {Roll}
+ SA 0.000557 0.000421; {x, y}
+ENDIF;
+
+MQ 0.3466 Q5*SC 0.06;                                      {Q5}
+
+IF (MISALIGN=1);
+ SA -0.000557 -0.000421; {x, y}
+ RA -0.0302; {Roll}
+ TA -0.0221 0.0275; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.152895825; {DL10 - Do. Q5 - FP1 Slits}
+{WMI;}
+
+{-------------------------------------------------------------------------------------}
+{FOCAL PLANE 1 - LOCATION OF SLH 1541, VD 1542 (1.77" X 2.5"), FC 1542 (1.9" X 2.011")}
+{-------------------------------------------------------------------------------------}
+
+{WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));}
+{WRITE 6 'FP1Xdim'&S(WW(1)-WW(2));}
+{WRITE 6 'ME(1,2) AT FP1 =' ME(1,2);}
+{WRITE 6 'ME(1,1) AT FP1 =' ME(1,1);}
+
+DL 0.080755344; {FP1 Slits - VD1542}
+{WMI;}
+
+DL 0.267380831; {VD1542 - Up. B3}
+{WMI;}
+
+{***** Section 2 *****}
+
+IF (MISALIGN=1);
+ TA 0.0086 -0.0112; {Yaw, Pitch}
+ RA -0.0082; {Roll}
+ SA 0.000264 0.000101; {x, y}
+ENDIF;
+
+MC 1.25 22.5321 0.05 B1N B3S1 B3S2 7;                      {B3}
+
+IF (MISALIGN=1);
+ SA -0.000264 -0.000101; {x, y}
+ RA 0.0082; {Roll}
+ TA -0.0086 0.0112; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.509073; {DL13}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0106 0.0001; {Yaw, Pitch}
+ RA -0.0028; {Roll}
+ SA 0.000495 0.000295; {x, y}
+ENDIF;
+
+MC 1.25 22.5807 0.05 B1N B4S1 B4S2 7;                      {B4}
+
+IF (MISALIGN=1);
+ SA -0.000495 -0.000295; {x, y}
+ RA 0.0028; {Roll}
+ TA -0.0106 -0.0001; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.297393; {DL14}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0253 -0.0259; {Yaw, Pitch}
+ RA -0.0017; {Roll}
+ SA 0.000712 0.000404; {x, y}
+ENDIF;
+
+M5 0.264 0 H2*SC 0 0 0 0.12;                                {HEX2}
+
+IF (MISALIGN=1);
+ SA -0.000712 -0.000404; {x, y}
+ RA 0.0017; {Roll}
+ TA 0.0253 0.0259; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.23027568; {DL15 - LOCATION OF AP 1568 (5 mm) AND FC 1568 (SIZE?)}
+{WMI;}
+
+DL 0.30808432; {DL16}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0009 -0.0088; {Yaw, Pitch}
+ RA -0.0052; {Roll}
+ SA 0.000521 0.000588; {x, y}
+ENDIF;
+
+MQ 0.3395 Q6*SC 0.14;                                      {Q6}
+
+IF (MISALIGN=1);
+ SA -0.000521 -0.000588; {x, y}
+ RA 0.0052; {Roll}
+ TA -0.0009 0.0088; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.196437; {DL17}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0153 -0.0004; {Yaw, Pitch}
+ RA -0.0007; {Roll}
+ SA 0.000469 0.000702; {x, y}
+ENDIF;
+
+MQ 0.3472 Q7*SC 0.13 ;                                     {Q7}
+
+IF (MISALIGN=1);
+ SA -0.000469 -0.000702; {x, y}
+ RA 0.0007; {Roll}
+ TA 0.0153 0.0004; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.496188; {DL18}
+{WMI;}
+
+{FC 1=dipole, 1/2=entrance/exit, 1/2=magn/elect, a1...a6}
+FC 1 1 1 -0.16 1.603 -0.0105 0.015 -0.0226 0.0038; {entr,magnet dipole}
+FC 1 2 1 -0.16 1.603 -0.0105 0.015 -0.0226 0.0038; {exit,magnet dipole}
+
+FC 1 1 2 -0.167 1.874 0.246 -0.052 0.0142 0.066;{entr, elect dipole}
+FC 1 2 2 -0.167 1.874 0.246 -0.052 0.0142 0.066;{exit, elect dipole}
+
+IF (WF1ON=1);
+IF (MISALIGN=1);
+ TA  0.0011 0.0016; {Yaw, Pitch}
+ RA -0.0008; {Roll}
+ SA 0.000045 0.000034; {x, y}
+ENDIF;
+CB;
+
+WC WF1R WF1R 2.365 0.11 NE1 NM1 4 ;                       {WF1}
+
+CB;
+IF (MISALIGN=1);
+ SA -0.000045 -0.000034; {x, y}
+ RA 0.0008; {Roll}
+ TA  -0.0011 -0.0016; {Yaw, Pitch}
+ENDIF;
+ELSEIF 1=1;
+DL 2.365;                                                 {WF1 OFF}
+ENDIF;
+FD;
+FR 3;
+
+{WMI;}
+
+DL 0.498516-0.1; {THIS IS PART OF WF1!}                    {DL19}
+DL 0.1;
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0077 0.0027; {Yaw, Pitch}
+ RA -0.0007; {Roll}
+ SA 0.000547 0.000295; {x, y}
+ENDIF;
+
+M5 0.263 0 H3*SC 0 0 0 0.09;                                {HEX3}
+
+IF (MISALIGN=1);
+ SA -0.000547 -0.000295; {x, y}
+ RA 0.0007; {Roll}
+ TA 0.0077 -0.0027; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.277156; {DL20}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA  0.0279 0.0180; {Yaw, Pitch}
+ RA 0.0085; {Roll}
+ SA 0.000453 0.000167; {x, y}
+ENDIF;
+
+M5 0.262 0 0 O1*SC 0 0 0.09;                                {OCT1}
+
+IF (MISALIGN=1);
+ SA -0.000453 -0.000167; {x, y}
+ RA -0.0085; {Roll}
+ TA  -0.0279 -0.0180; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+{DL 0.26;}                                                   {NO OCT1}
+
+DL 1.750011; {DL21, Do. O1 - FP2 Slits}
+{WMI;}
+
+{----------------------------------------------------------------------------------------}
+{FOCAL PLANE 2 - LOCATION OF SLH 1638, VD 1638 (4.951" X 3.134"), FC 1638 (4.9" X 2.469")}
+{----------------------------------------------------------------------------------------}
+
+{WRITE 6 'FP2Xdim' WV;}
+{WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));}
+{WRITE 6 'FP2Xdim' WW(1)-WW(2);}
+
+WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));
+WV:=(WW(1)-WW(2));
+MRESOL_P2 := ABS(ME(1,7))/(2*XX*ME(1,1));
+WRITE 6 'Mass Res.Power at FP2 ='&S(MRESOL_P2);
+WRITE 6 'FP2Res ='&S((ABS(ME(1,7))/(WV)));
+WRITE 6 'M11=XX, M12=XY, M16=XE, M26=YE, M17=XM =>' ME(1,1) ME(1,2) ME(1,6) ME(2,6) ME(1,7);
+
+DL 0.28; {FP2 Slits - VD1638}
+{WMI;}
+
+DL 0.59233; {VD1638 - Up. Q8}
+{WMI;}
+
+{***** Section 3 *****}
+
+IF (MISALIGN=1);
+ TA 0.0115 0.0379; {Yaw, Pitch}
+ RA -0.0009; {Roll}
+ SA 0.000480 -0.000242; {x, y}
+ENDIF;
+
+M5 0.2473 Q8*SC 0 -9.88E-5*(Q8/-0.14859)*SC 0 0 0.05;        {Q8_oct}
+
+IF (MISALIGN=1);
+ SA -0.000480 0.000242; {x, y}
+ RA 0.0009; {Roll}
+ TA -0.0115 -0.0379; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.394688; {DL23}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0024 -0.0079; {Yaw, Pitch}
+ RA -0.0008; {Roll}
+ SA 0.000834 -0.000234; {x, y}
+ENDIF;
+
+M5 0.3037 Q9*SC 0 0.00015*(Q9/0.2855)*SC 0 0 0.07;           {Q9_oct}
+
+IF (MISALIGN=1);
+ SA -0.000834 0.000234; {x, y}
+ RA 0.0008; {Roll}
+ TA 0.0024 0.0079; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.358445; {DL24}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0052 0.0011 ; {Yaw, Pitch}
+ RA -0.0092; {Roll}
+ SA 0.000766 -0.000359; {x, y}
+ENDIF;
+
+MC 1.25 42.5 0.036 B1N B5S1 B5S2 7;                        {B5}
+
+IF (MISALIGN=1);
+ SA -0.000766 0.000359; {x, y}
+ RA 0.0092; {Roll}
+ TA -0.0052 -0.0011 ; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.35042; {DL25}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0065 -0.0035; {Yaw, Pitch}
+ RA -0.0130; {Roll}
+ SA 0.000332 -0.000355; {x, y}
+ENDIF;
+
+MC 1.25 42.5 0.036 B1N B6S1 B6S2 7;                        {B6}
+
+IF (MISALIGN=1);
+ SA -0.000332 0.000355; {x, y}
+ RA 0.0130; {Roll}
+ TA -0.0065 0.0035; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.562676442; {To VD 1688 (3.05" X 4.404")}
+{WMI;}
+
+DL 0.266293558; {Remainder of DL26}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0024 -0.0015; {Yaw, Pitch}
+ RA 0.0078; {Roll}
+ SA 0.000369 0.000087; {x, y}
+ENDIF;
+
+M5 0.2628 Q10*SC 0 5.154e-5*(-0.0335/Q10)*SC 0 0 0.09;       {Q10_oct}
+
+IF (MISALIGN=1);
+ SA -0.000369 -0.000087; {x, y}
+ RA -0.0078; {Roll}
+ TA 0.0024 0.0015; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.64758; {DL27}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0452 -0.0024; {Yaw, Pitch}
+ RA -0.0027; {Roll}
+ SA 0.000284 0.000271; {x, y}
+ENDIF;
+
+M5 0.3424 Q11*SC 0 0.000115625*(0.149432825/Q11)*SC 0 0 0.12;{Q11_oct}
+
+IF (MISALIGN=1);
+ SA -0.000284 -0.000271; {x, y}
+ RA 0.0027; {Roll}
+ TA 0.0452 0.0024; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.997726; {DL28}
+{WMI;}
+
+FC 1 1 1 -0.16 1.603 -0.0105 0.015 -0.0226 0.0038; {entr,magnet dipole}
+FC 1 2 1 -0.16 1.603 -0.0105 0.015 -0.0226 0.0038; {exit,magnet dipole}
+{after WF modif.}
+FC 1 1 2  -0.124 1.98 0.186 -0.069 0.01 0.053;{entr, elect dipole}
+FC 1 1 2  -0.124 1.98 0.186 -0.069 0.01 0.053;{entr, elect dipole}
+
+{Fernando introduced artificial misalignments to WF2 to "correct"
+for the deviations caused by Q9's 0.8mm misalignment}
+
+IF (WF2ON=1);
+IF (MISALIGN=1);
+ TA -0.1 -0.1; {Yaw, Pitch}
+ {RA 10.1; {Roll}}
+ {SA 0.001 0.001; {x, y}}
+ENDIF;
+
+CB;
+WC WF2R WF2R 2.365  0.11 NE2 NM1 4 ;                       {WF2}
+CB;
+
+IF (MISALIGN=1);
+ TA 0.1 0.1; {Yaw, Pitch}
+ {RA -10.1; {Roll}}
+ {SA -0.001 -0.001; {x, y}}
+ENDIF;
+ELSEIF 1=1;
+DL 2.365;                                                  {WF2 OFF}
+ENDIF;
+FD;
+FR 3;
+
+{WMI;}
+
+DL 4.644225559; {DL29, Do. WF2 - SLH_VD1783 (Only separated by a small distance)}
+{WMI;}
+
+{-----------------------------------------------------------------------------------------}
+{FOCAL PLANE 3 - LOCATION OF SLH 1783, VD 1783 (4.65" X 5.236"), FC 1798 (1.587" X 1.423")}
+{-----------------------------------------------------------------------------------------}
+
+{WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));}
+{WRITE 6 'FP3Xdim' WW(1)-WW(2);}
+{WV:=(WW(1)-WW(2));}
+{WRITE 6 'FP3Xdim' WV;}
+{MRESOL_P1 := ABS(ME(1,7))/(2*XX*ME(1,1));}
+{WRITE 6 'Mass Res.Power at FP3 ='&S(MRESOL_P1);}
+{WRITE 6 'FP3Res ='&S((ABS(ME(1,7))/(WV)));}
+{WRITE 6 'M11=XX, M12=XY, M16=XE, M26=YE, M17=XM =>' ME(1,1) ME(1,2) ME(1,6) ME(2,6) ME(1,7);}
+
+DL 0.208449441; {DL30, VD1783 - Up. Q12}
+{WMI;}
+
+{***** Section 4 *****}
+
+IF (MISALIGN=1);
+ TA -0.0156 0.0091; {Yaw, Pitch}
+ RA -0.0055; {Roll}
+ SA 0.000282 -0.000196; {x, y}
+ENDIF;
+
+MQ 0.2977 Q12*SC 0.07;                                     {Q12}
+
+IF (MISALIGN=1);
+ SA -0.000282 0.000196; {x, y}
+ RA 0.0055; {Roll}
+ TA 0.0156 -0.0091; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.350425; {DL31}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0321 -0.0380; {Yaw, Pitch}
+ RA 0.0271; {Roll}
+ SA 0.000301 -0.000191; {x, y}
+ENDIF;
+
+MQ 0.3008 Q13*SC 0.05;                                     {Q13}
+
+IF (MISALIGN=1);
+ SA -0.000301 0.000191; {x, y}
+ RA -0.0271; {Roll}
+ TA -0.0321 0.0380; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.659564; {DL32}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0122 -0.0015; {Yaw, Pitch}
+ RA -0.0031; {Roll}
+ SA 0.000292 -0.000482; {x, y}
+ENDIF;
+
+MC 1.25 55. 0.03 B1N B7S1 B7S2 4;                          {B7}
+
+IF (MISALIGN=1);
+ SA -0.000292 0.000482; {x, y}
+ RA 0.0031; {Roll}
+ TA -0.0122 0.0015; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.680262; {DL33}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0048 0.0004; {Yaw, Pitch}
+ RA -0.0002; {Roll}
+ SA -0.000214 -0.000520; {x, y}
+ENDIF;
+
+MC 1.25 55. 0.03 B1N B8S1 B8S2 4;                          {B8}
+
+IF (MISALIGN=1);
+ SA 0.000214 0.000520; {x, y}
+ RA 0.0002; {Roll}
+ TA -0.0048 -0.0004; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.389887068; {To VD 1836 (SIZE?)}
+{WMI;}
+
+DL 0.469972932; {Remainder of DL34}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA 0.0167 -0.0073; {Yaw, Pitch}
+ RA 0.0073; {Roll}
+ SA -0.000269 -0.000371; {x, y}
+ENDIF;
+
+MQ 0.2995 Q14*SC 0.05;                                     {Q14}
+
+IF (MISALIGN=1);
+ SA 0.000269 0.000371; {x, y}
+ RA -0.0073; {Roll}
+ TA -0.0167 0.0073; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.449858; {DL35}
+{WMI;}
+
+IF (MISALIGN=1);
+ TA -0.0232 0.0149; {Yaw, Pitch}
+ RA -0.0214; {Roll}
+ SA -0.000262 -0.000540; {x, y}
+ENDIF;
+
+MQ 0.3012 Q15*SC 0.05;                                     {Q15}
+
+IF (MISALIGN=1);
+ SA 0.000262 0.000540; {x, y}
+ RA 0.0214; {Roll}
+ TA 0.0232 -0.0149; {Yaw, Pitch}
+ENDIF;
+
+{WMI;}
+
+DL 0.7112; {Do. Q15 - UMCP}
+{WMI;}
+
+DL 1.397508; {UMCP - DMCP}
+{WMI;}
+
+DL 0.512209509; {UMCP - SLH1879}
+{WMI;}
+
+DL 0.208469264; {SLH1879 - VD1879}
+{WMI;}
+
+DL 0.3302; {VD1879 - DSSD}
+{WMI;}
+
+{WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));
+WVX:=(WW(1)-WW(2))*(WW(1)-WW(2));
+WW(1):= VMAX(RAY(3));
+WW(2):= VMIN(RAY(3));
+WVY:=(WW(1)-WW(2))*(WW(1)-WW(2));}
+{WRITE 6 'BeamSpotSize'&S((WVX+WVY));}
+
+ENDPROCEDURE;
+
+{##############################################################}
+{############## DEFINITION AND COMMAND ########################}
+{##############################################################}
+OV 4 3 2 ;
+{OV 1 3 2 ;}
+
+WSET 1.5E-3; {REQUIRED TO MINIMIZE ERROR IN WF INTEGRATION}
+SETEFB; {SET THE DIPOLES EFB's and WF E- and B-FIELDS INHOMOGENEITIES}
+
+{******************************************}
+{YOU DEFINE THE INITIAL RAY PARAMETERS HERE}
+XX:=0.00075;
+YY:=0.00075;
+AX:=0.025;
+AY:=0.025;
+DE:= 0.031;
+{******************************************}
+
+NMAX:=189;
+
+{SET MAGNETS}
+Q1_SC:= 1.0;
+Q2_SC:= 1.0;
+Q3_SC:= 1.0;
+Q4_SC:= 1.0;
+Q5_SC:= 1.0;
+Q6_SC:= 1.0;
+Q7_SC:= 0.981;
+Q8_SC:= 1.0;
+Q9_SC:= 1.0; {*0.905;}  {-9.5%}
+Q10_SC:= 1.0;
+Q11_SC:= 0.985; {*0.886;}  {-11.4%}
+Q12_SC:= 0.97;
+Q13_SC:= 0.86; {*0.81/0.86;}
+Q14_SC:= 1.327; {*0.91/1.327;} {1.327;} {1.03 x1.289 phenomenological}
+Q15_SC:= 1.241*(1.421/1.241); {*0.85/1.421;} {1.241;} {0.96 x1.293 phenomenological}
+H1_SC:= 1.02;
+H2_SC:= 1.0;
+H3_SC:= 1.0;
+O1_SC:= 1.0;
+
+{THIS IS WHERE YOU CHANGE YOU CONFIGURATION}
+WF1R:=7.0; {define the bending radius in WF1}
+WF2R:=7.0; {define the bending radius in WF2 -- not important here because it is off}
+WF1ON:=1; {WF2ON 0=OFF or 1=ON - CURRENTLY WF2 IS OFF}
+WF2ON:=1; {WF2ON 0=OFF or 1=ON - CURRENTLY WF2 IS OFF}
+MISALIGN:=1; {ACCOUNT =1 or not =0 for the measured misalignment}
+OCT1ON:=1; {is octupole 1 ON=1 or OFF=0}
+
+MATRIXINDEX := 250; {See page 53 of programmer's manual - need to avoid hitting already set units like -12 for making pdfs}
+
+{*****(p,g) from Berg optics*****}
+Q1:=-0.39773*Q1_SC;
+Q1H:=0.004679;
+Q2:=0.219352*Q2_SC;
+H1:=0.0103065*H1_SC;
+Q3:=0.242872*Q3_SC;
+Q4:=-0.24756*Q4_SC;
+Q5:=0.112391*Q5_SC;
+H2:=0.010507*H2_SC;
+Q6:=0.181632*Q6_SC;
+Q7:=-0.030022*Q7_SC;
+H3:=-0.0083745*H3_SC;
+O1:=0.031283*O1_SC;
+Q8:=-0.14822*Q8_SC;
+Q9:=0.234380*Q9_SC;
+Q10:=-0.03367*Q10_SC;
+Q11:=0.161580*Q11_SC;
+Q12:=-0.182*Q12_SC;
+Q13:=0.1910*Q13_SC;
+Q14:=0.12900*Q14_SC;
+Q15:=-0.1380*Q15_SC; {If beam is 66 Selenium, field at pole tip}
+
+{ALL THE MAGNETIC FIELD WILL BE SCALED TO THE RIGIDITY DEFINED IN THE TWO LINES BELOW}
+{DON'T TOUCH THE NEXT TWO LINES!!!}
+RP 206 66*PARA(1) 21*PARA(2) ; {Rigidity of 66 Selenium}
+CANONICAL_RIGIDITY:=CONS(CHIM);
+
+{******************************************}
+{SET YOUR RECOIL OR BEAM HERE}
+{RP 8.9566031061 19.9886*PARA(1) 7*PARA(2);}
+{******************************************}
+
+{DON'T TOUCH THE NEXT LINE!!!}
+SC:=CONS(CHIM)/CANONICAL_RIGIDITY;
+
+UM;
+CR {Clears all rays}; UM;
+
+{N1=1 {# of rays: 3} -> -1 0 +1}
+{N1=2 {# of rays: 5} -> -2 -1 0 +1 +2}
+{N1=3 {# of rays: 7} -> -3 -2 -1 0 +1 +2 +3}
+{N1=4 {# of rays: 9} -> -4 -3 -2 -1 0 +1 +2 +3 +4}
+
+N1:=1;N2:=3;N3:=1;N4:=1;N5:=2;
+
+LOOP NX 1 2*N1+1;LOOP NA 1 2*N2+1;LOOP NY 1 2*N3+1;LOOP NB 1 2*N4+1;
+LOOP NE 1 2*N5+1;
+
+SRXX:= XX*(NX-(N1+1))/N1;
+SRAX:= AX*(NA-(N2+1))/N2;
+SRYY:= YY*(NY-(N3+1))/N3;
+SRAY:= AY*(NB-(N4+1))/N4;
+SRDE:= DE*(NE-(N5+1))/N5;
+
+IF (((NA-(N2+1))/N2)^2+((NB-(N4+1))/N4)^2+((NE-(N5+1))/N5)^2)<1.01;
+SR SRXX SRAX SRYY SRAY 0 SRDE 0 0 1;
+ENDIF;
+ENDLOOP;ENDLOOP;ENDLOOP;ENDLOOP;ENDLOOP;
+
+{Test ray - Modify and/or add more for testing}
+{Available Colors: 1=black, 2=blue, 3=red, 4=yellow, 5=green}
+{6=yellowish green, 7=cyan, 8=magenta, 9=navy, 10=white/backgrnd}
+{SR XX AX YY AY DL DE DM DZ Color;}
+
+{SR 0 0 0 0 0 0 0 0 3;       {Fragment of interest (central ray), Red}
+SR 0 0 0 0 0 0 (1/350) 0 6; {Relative mass dm/m = 1/350}
+SR 0 0 0 0 0 -0.1 0 0 8; {Relative energy dE/E}
+SR -0.005 0 0 0 0 0 0 0 3; }
+
+BP;
+RECOIL_BL;
+EP;
+
+PG -12 -12;
+
+{WW(1):= VMAX(RAY(1));
+WW(2):= VMIN(RAY(1));
+WV:=(WW(1)-WW(2));
+CENTER := (WW(1)+WW(2))/2;
+WRITE 6 'VMAX_SIZE ='&S(WW(1));
+WRITE 6 'VMIN_SIZE ='&S(WW(2));
+WRITE 6 'Image size ='&S(WV);
+WRITE 6 'Image Center is at'&S(CENTER);
+WRITE 6 'Resolution by max ray at FP4 ='&S(ABS(ME(1,7))/(WV));
+WRITE 6 'M11=XX, M12=XY, M16=XE, M26=YE, M17=XM =>' ME(1,1) ME(1,2) ME(1,6) ME(2,6) ME(1,7);
+WRITE 6 'M11*M22 ='&S(ME(1,1)*ME(2,2));}
+
+ENDPROCEDURE ;
+RUN ;
+END ;
